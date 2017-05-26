@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/iptomar/projectary-api.git"
+    "url": "git+https://github.com/barcelosrui/gestrepairapi.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/iptomar/projectary-api/issues"
+    "url": "https://github.com/barcelosrui/gestrepairapi/issues"
   },
-  "homepage": "https://github.com/iptomar/projectary-api#readme",
+  "homepage": "https://github.com/barcelosrui/gestrepairapi#readme",
   "dependencies": {
     "async": "^2.3.0",
     "body-parser": "^1.17.1",

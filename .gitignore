@@ -1,0 +1,18 @@
+### Vagrant
+.vagrant
+
+
+### Node
+
+# Modules
+node_modules
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# System
+.DS_Store

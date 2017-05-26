@@ -1,9 +1,9 @@
-GEST repairs
+GestRepair
 ==============
 Repository with the api code 
 
-## Database
-The database can be found [here](https://github.com/iptomar/projectary-bd)
+## API
+The API can be found [here](https://github.com/barcelosrui/gestRepairapi)
 
-## Frontend
-The frontend can be found [here](https://github.com/iptomar/projectary-frontend)
+## Frontend Desktop Java
+The Frontend JAVA can be found [here](https://github.com/barcelosrui/GestRepairFrontendJava)

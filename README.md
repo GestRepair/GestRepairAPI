@@ -2,6 +2,9 @@ GestRepair
 ==============
 Repository with the api code 
 
+##⚠️ ATENTION ⚠️
+⚠️In file dbsql on object email you don't forget clean field user and password!!!!!!!!!!!!!!!!!!!!!!!!!!⚠️
+
 ## API
 The API can be found [here](https://github.com/barcelosrui/gestRepairapi)
 

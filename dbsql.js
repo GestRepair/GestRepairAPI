@@ -35,6 +35,7 @@ var sendMessage = function(message, destination, subject, from, callback) {
 
 module.exports = {
   'url' :'http://localhost:8080',
+  'urlf' :'http://localhost:4200',
   'mysql': pool,
   'email': sendMessage,
   /*'photoPath': __dirname + "/photo",

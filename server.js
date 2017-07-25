@@ -15,7 +15,6 @@ var sizeLimit = '50mb';
 app.use(cors());
 
 app.use(morgan(':req[x-forwarded-for] - :remote-addr - [:date] ":method :url HTTP/:http-version" :status :res[content-length]'));
-//app.use(express.static(__dirname + '/../projectary-frontend/'));
 app.use(express.static(__dirname+'/lib/http/routes'))
 app.use(bodyParser.urlencoded({ extended: true, limit: sizeLimit }));
 app.use(bodyParser.json({ limit: sizeLimit }));

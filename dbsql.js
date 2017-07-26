@@ -38,6 +38,6 @@ module.exports = {
   'urlf' :'http://localhost:4200',
   'mysql': pool,
   'email': sendMessage,
-  /*'photoPath': __dirname + "/photo",
-  'defaultPhoto': 'default_photo.png'*/
+  'photoPath': __dirname + "/photo",
+  'defaultPhoto': 'default_photo.png'
 };

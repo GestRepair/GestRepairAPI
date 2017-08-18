@@ -11,18 +11,17 @@ var express = require('express'),
 var app = express();
 var sizeLimit = '50mb';
 
-// required by frontend
 app.use(cors());
 
 app.use(morgan(':req[x-forwarded-for] - :remote-addr - [:date] ":method :url HTTP/:http-version" :status :res[content-length]'));
-app.use(express.static(__dirname+'/lib/http/routes'))
+app.use(express.static(__dirname + '/lib/http/routes'))
 app.use(bodyParser.urlencoded({ extended: true, limit: sizeLimit }));
 app.use(bodyParser.json({ limit: sizeLimit }));
 routes(app);
 
 module.exports = {
   'app': app,
-  'start': function(tenv) {
+  'start': function (tenv) {
     var port = process.env.PORT || 8080;
     var env = tenv || process.env.NODE_ENV;
 
@@ -38,11 +37,11 @@ module.exports = {
     var bar = new ProgressBar('(SYSTEM) Loading... [:bar] :percent :etas', {
       total: 40
     });
-    var timer = setInterval(function() {
+    var timer = setInterval(function () {
       bar.tick(8);
       if (bar.complete) {
         clearInterval(timer);
-        app.listen(port, function() {
+        app.listen(port, function () {
           console.log('(PLAIN) Server listening on port %d.'.green, port);
         });
       }

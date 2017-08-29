@@ -6,6 +6,7 @@ var express = require('express'),
   routes = require('./lib/http/routes.js'),
   ProgressBar = require('progress'),
   os = require("os"),
+  dbsql = require("./dbsql.js"),
   cors = require('cors');
 
 var app = express();
@@ -24,27 +25,31 @@ module.exports = {
   'start': function (tenv) {
     var port = process.env.PORT || 8080;
     var env = tenv || process.env.NODE_ENV;
-
     switch (env) {
       case 'development':
         port = 1337;
         break;
       default:
-    }
-
-    console.log('(SYSTEM) GESTREPAIR API'.green);
-
-    var bar = new ProgressBar('(SYSTEM) Loading... [:bar] :percent :etas', {
-      total: 40
-    });
-    var timer = setInterval(function () {
-      bar.tick(8);
-      if (bar.complete) {
-        clearInterval(timer);
-        app.listen(port, function () {
-          console.log('(PLAIN) Server listening on port %d.'.green, port);
-        });
       }
-    }, 1000);
-  }
+      dbsql.mysql.getConnection(function(err){
+        if(!err) {
+          console.log("(DATABASE) Database is connected ... nn".gray);
+          console.log('(SYSTEM) GESTREPAIR API'.green);
+          var bar = new ProgressBar('(SYSTEM) Loading... [:bar] :percent :etas', {
+            total: 40
+          });
+          var timer = setInterval(function () {
+            bar.tick(8);
+            if (bar.complete) {
+              clearInterval(timer);
+              app.listen(port, function () {
+                console.log('(PLAIN) Server listening on port %d.'.green, port);
+              });
+            }
+          }, 1000);
+        } else {
+          console.log("(DATABASE) Error connecting database ... nn".red);
+        }
+      });
+    }
 };

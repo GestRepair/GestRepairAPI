@@ -2,6 +2,7 @@ var mysql = require('mysql'),
   emailjs = require('emailjs');
 
 var pool  = mysql.createPool({
+  connectionLimit : 1000,
   host     : 'localhost',
   user     : 'root',
   password : '123qwe',

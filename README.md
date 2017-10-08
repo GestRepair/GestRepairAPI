@@ -28,4 +28,4 @@ The Frontend JAVA can be found [here](https://github.com/GestRepair/GestRepairAP
 5. To start api, enter the command npm start on the command line.
 
 ## API LINK 
-API - http://ec2-52-56-143-158.eu-west-2.compute.amazonaws.com:8080
+API - http://gestrepair.ddns.net:8080

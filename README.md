@@ -1,7 +1,7 @@
 GestRepair
 ==============
 Repository with the api code 
-
+[![codebeat badge](https://codebeat.co/badges/a32936df-8925-44ac-9cd1-c77d3da4ac04)](https://codebeat.co/projects/github-com-gestrepair-gestrepairapi-master)
 ## ATENTION ⚠️
 In file dbsql on object email you don't forget clean field user and password!!!!!!!!!!!!!!!!!!!!!!!!!!
 
